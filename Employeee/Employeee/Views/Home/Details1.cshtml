@@ -1,0 +1,40 @@
+﻿
+@model IEnumerable<Employeee.Model.Employee>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+    @foreach (var employee in Model) {
+        <div class="card text-dark bg-warning mb-3" style="max-width: 25rem;">
+            <div class="card-header"><h1>Employee Details </h1></div>
+
+            <div class="card-body">
+                @*<img class="card-img-top" src="~/images/4.png" />*@
+                <h5> Id: @employee.Id</h5>
+                <h5> Age: @employee.Place</h5>
+                <h5>Name: @employee.Name</h5>
+            </div>
+
+            <div class="card-footer bg-transparent border-dark">
+                <div class="card-footer text-center">
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="@employee.Id" class="btn btn-success">View</a>
+                    <button class="btn btn-primary">UPDATE </button>
+                    <button class="btn btn-danger"> DELETE</button>
+                    <button class="btn btn-dark"> DONE</button>
+                </div>
+            </div>
+
+        </div>
+    }
+
+
+</body>
+</html>
+
+

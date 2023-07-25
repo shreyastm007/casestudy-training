@@ -1,0 +1,25 @@
+﻿
+
+@model Employeee.ViewModel.HomeDetailsViewModel;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="card text-dark bg-info mb-3" style="max-width: 30rem;">
+    <div class="card-header">Employee Details</div>
+
+    <div class="card-body">
+        @*<img class="card-img-top" src="~/images/4.png" asp-append-version="true" />*@
+        <h5> Age: @Model.Employee.Place</h5>
+        <h5> Id: @Model.Employee.Id</h5>
+        <h5> Name: @Model.Employee.Name</h5>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-success"> VIEW</button>
+        <button class="btn btn-primary">UPDATE </button>
+        <button class="btn btn-danger"> DELETE</button>
+        <a asp-controller="Home" asp-action="Details1" asp-route-id="@Model.Employee.Id" class="btn btn-dark">Done</a>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,51 @@
+﻿@model ShoppingCart.Models.Shopping
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1> Create</h1>
+<h4>Shopping</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CartName" class="control-label"></label>
+                <input asp-for="CartName" class="form-control" />
+                <span asp-validation-for="CartName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShoppingType" class="control-label"></label>
+                <input asp-for="ShoppingType" class="form-control" />
+                <span asp-validation-for="ShoppingType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CartType" class="control-label"></label>
+                <input asp-for="CartType" class="form-control" />
+                <span asp-validation-for="CartType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoOfItems" class="control-label"></label>
+                <input asp-for="NoOfItems" class="form-control" />
+                <span asp-validation-for="NoOfItems" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypeOfItems" class="control-label"></label>
+                <input asp-for="TypeOfItems" class="form-control" />
+                <span asp-validation-for="TypeOfItems" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+

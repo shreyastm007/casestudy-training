@@ -1,0 +1,90 @@
+﻿GRASP – General Responsibility Assignment Software Patterns
+
+1.creator
+2.information expert
+3.low coupling
+4.controller
+5.high cohesion
+6.indirection
+7.polymorphism.
+8.protected variations
+9.pure fabrication
+
+
+
+1.creator:● Decide who can be creator based on the 
+objects association and their interaction.
+VideoStore has an aggregation association 
+with Video. I.e, VideoStore is the container and 
+the Video is the contained object
+
+2.information expert:● Since VideoStore knows about all the videos, 
+we can assign this responsibility of giving all 
+the videos can be assigned to VideoStore 
+class.
+● VideoStore is the information expert.
+
+3.● Coupling – object depending on other object.
+● When depended upon element changes, it affects the dependant 
+also.
+● Low Coupling – How can we reduce the impact of change in 
+depended upon elements on dependant elements.
+● Prefer low coupling – assign responsibilities so that coupling remain 
+low.
+● Minimizes the dependency hence making system maintainable, 
+efficient and code reusable
+
+4.● Benefits 
+– can reuse this controller class.
+– Can use to maintain the state of the use case.
+– Can control the sequence of the activities
+● Controller class is called bloated, if
+– The class is overloaded with too many 
+responsibilities. 
+Solution – Add more controllers
+
+5.● Prefer high cohesion
+● Clearly defines the purpose of the element
+● Benefits
+– Easily understandable and maintainable.
+– Code reuse
+– Low coupling
+
+6.● How can we avoid a direct coupling between 
+two or more elements.
+● Indirection introduces an intermediate unit to 
+communicate between the other units, so that 
+the other units are not directly coupled.
+● Benefits: low coupling
+
+
+7.● Polymorphism guides us in deciding which 
+object is responsible for handling those 
+varying elements.
+● Benefits: handling new variations will become 
+easy.
+
+8.protected variations:● How to avoid impact of variations of some 
+elements on the other elements.
+● It provides a well defined interface so that the 
+there will be no affect on other units.
+● Provides flexibility and protection from 
+variations.
+● Provides more structured design.
+● Example: polymorphism, data encapsulation, 
+interfaces
+
+
+9.● Fabricated class/ artificial class 
+● Provides a highly cohesive set of activities.
+● Benefits: High cohesion, low coupling and can 
+reuse this class.
+● Suppose we have a Shape class, if we must store this
+data in a database. 
+● If we put this responsibility in Shape class, there will be 
+many database related operations thus making Shape 
+incohesive.
+● So, create a fabricated class DBStore which is 
+responsible to perform all database operations.
+
+

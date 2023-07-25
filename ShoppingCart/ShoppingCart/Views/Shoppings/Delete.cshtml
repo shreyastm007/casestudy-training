@@ -1,0 +1,52 @@
+﻿@model ShoppingCart.Models.Shopping
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1> DELETE </h1>
+
+
+<div>
+    <h4>Shopping</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CartName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CartName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ShoppingType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ShoppingType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CartType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CartType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoOfItems)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoOfItems)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TypeOfItems)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TypeOfItems)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
+

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ShoppingCart.Models.Shopping>
+@*@model ShoppingCart.Models.Shopping*@
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h4>My Cart</h4>
+<img src="https://media.tenor.com/bus-OnjoUXcAAAAC/tpot-shopping-cart.gif">
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CartItems">
+
+            @*<dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CartName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CartName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ShoppingType)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ShoppingType)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CartType)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CartType)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NoOfItems)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NoOfItems)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model =>model.TypeOfItems)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model =>model.TypeOfItems)
+                </dd>
+            </dl>*@
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
